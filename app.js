@@ -16,7 +16,7 @@ const catalogRouter = require("./routes/catalog");
 var app = express();
 
 const mongoose = require("mongoose");
-const URI = process.env.MONGO_URI;
+const URI = process.env.MONGODB_URI || process.env.MONGO_URI;
 
 mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
